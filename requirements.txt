@@ -13,5 +13,4 @@ Send2Trash==1.8.2
 streamlit==1.26.0
 streamlit-bokeh-events==0.1.2
 xgboost==1.7.6
-bokeh bokeh
 bokeh.plotting
