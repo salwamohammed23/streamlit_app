@@ -32,7 +32,7 @@ import os
 
 st.title('Machine Learning App using')
 ml_logo = "pycaret.png"
-st.image(ml_logo, width=500)
+#st.image(ml_logo, width=500)
 st.title('Auto ML Library')
 
 if os.path.exists("sourcev.csv"):
