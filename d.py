@@ -41,7 +41,7 @@ if os.path.exists("sourcev.csv"):
 with st.sidebar:
     st.title('Welcome to ML App')
     ml_logo = "ml.png"
-    st.image(ml_logo, width=200)
+    #st.image(ml_logo, width=200)
     st.write('This application provides functionalities to work with built-in datasets from scikit-learn, perform EDA, train machine learning models using Pycaret, and download the trained models.')
     st.write('Choose your parameters.')
     choose = st.radio('Choose your options',['Dataset', 'EDA','Training','Download'])
