@@ -7,4 +7,4 @@ pycaret
 pandas_profiling
 streamlit_pandas_profiling
 bokeh==2.4.3
-
+streamlit_bokeh_events
