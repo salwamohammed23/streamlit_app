@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 
-data_daily = pd.read_csv('E:/streamlit/New folder/Daily_registration_subscription_counts.csv')
+data_daily = pd.read_csv('Daily_registration_subscription_counts.csv')
 
 # Create a Streamlit web app
 st.title("User Registration and Subscription Dashboard - Daily")
@@ -21,7 +21,7 @@ st.plotly_chart(fig_daily)
 ###############################################################################################
 
 
-data_weekly = pd.read_csv('E:/streamlit/New folder/Week_registration_subscription_counts.csv')
+data_weekly = pd.read_csv('Week_registration_subscription_counts.csv')
 
 # Create a Streamlit web app
 st.title("User Registration and Subscription Dashboard - Weekly")
@@ -38,7 +38,7 @@ fig_weekly.update_layout(xaxis_title='Week', yaxis_title='Number of Users')
 st.plotly_chart(fig_weekly)
 #####################################################
 
-data_monthly = pd.read_csv('E:/streamlit/New folder/M_registration_subscription_counts.csv')
+data_monthly = pd.read_csv('M_registration_subscription_counts.csv')
 
 # Create a Streamlit web app
 st.title("User Registration and Subscription Dashboard - Monthly")
@@ -55,7 +55,7 @@ fig_monthly.update_layout(xaxis_title='Month', yaxis_title='Number of Users')
 st.plotly_chart(fig_monthly)
 #############################################################################
 
-data_yearly = pd.read_csv('E:/streamlit/New folder/year_registration_subscription_counts.csv')
+data_yearly = pd.read_csv('year_registration_subscription_counts.csv')
 
 # Create a Streamlit web app
 st.title("User Registration and Subscription Dashboard - Yearly")
@@ -75,7 +75,7 @@ path=os.getcwd()
 print(path)
 ###############################################################
 
-df = pd.read_csv('E:/streamlit/New folder/10k AI initiative.csv')
+df = pd.read_csv('10k AI initiative.csv')
 
 # Filter for users who have completed courses
 completed_users = df[df['completed_courses_count'] > 0]
@@ -98,7 +98,7 @@ import pandas as pd
 import plotly.express as px
 
 
-df = pd.read_csv('E:/streamlit/New folder/user_courses.csv')
+df = pd.read_csv('user_courses.csv')
 
 if 'user_id' in df.columns and 'course_id' in df.columns:
     # Group data by user_id and count the number of currently learning courses
@@ -126,7 +126,7 @@ else:
     st.error("Column 'user_id' or 'course_id' not found in the dataset.")
     ########################3
    
-df = pd.read_csv('E:/streamlit/New folder/this_y_ Completed_Courses.csv')
+df = pd.read_csv('this_y_ Completed_Courses.csv')
 
 
 if 'user_id' in df.columns and 'completed_courses_count' in df.columns:
@@ -151,7 +151,7 @@ else:
     st.error("Column 'user_id' or 'completed_courses_count' not found in the dataset.")
     ####################################
     
-df = pd.read_csv('E:/streamlit/New folder/this_M_ Completed_Courses.csv')
+df = pd.read_csv('this_M_ Completed_Courses.csv')
 
 
 if 'user_id' in df.columns and 'completed_courses_count' in df.columns:
@@ -175,7 +175,7 @@ if 'user_id' in df.columns and 'completed_courses_count' in df.columns:
 else:
     st.error("Column 'user_id' or 'completed_courses_count' not found in the dataset.")
     #################################5%######################################################
-data = pd.read_csv('E:/streamlit/New folder/users_com_5.csv')
+data = pd.read_csv('users_com_5.csv')
 
 st.title("User Information Dashboard")
 
@@ -210,7 +210,7 @@ else:
     #################66666666666666666666666666666666666666
 
 
-eval_df = pd.read_csv("E:/streamlit/New folder/Capstones evaluated this month.csv")
+eval_df = pd.read_csv("Capstones evaluated this month.csv")
 
 st.title("Capstone Evaluations Dashboard")
 
@@ -228,7 +228,7 @@ ax.set_title('Capstone Evaluations by Admin This Month')
 # Display the chart in the Streamlit app
 st.pyplot(fig)
 
-eval_df2 = pd.read_csv("E:/streamlit/New folder/Capstones evaluated this year.csv")
+eval_df2 = pd.read_csv("Capstones evaluated this year.csv")
 
 st.title("Capstone Evaluations Dashboard this year")
 
