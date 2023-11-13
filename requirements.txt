@@ -8,11 +8,6 @@ pandas_profiling
 streamlit_pandas_profiling
 bokeh
 streamlit_bokeh_events
-
-pandas
-pandas-profiling
 streamlit-pandas-profiling
-scikit-learn
-matplotlib3
 seaborn
 
