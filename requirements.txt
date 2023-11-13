@@ -6,13 +6,13 @@ matplotlib
 pycaret
 pandas_profiling
 streamlit_pandas_profiling
-bokeh==2.4.3
+bokeh
 streamlit_bokeh_events
-streamlit==0.87.0
-pandas==1.3.3
-pandas-profiling==3.1.0
-streamlit-pandas-profiling==0.1.4
-scikit-learn==0.24.2
-matplotlib==3.4.3
-seaborn==0.11.2
+
+pandas
+pandas-profiling
+streamlit-pandas-profiling
+scikit-learn
+matplotlib3
+seaborn
 
