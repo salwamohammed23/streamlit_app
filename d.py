@@ -17,7 +17,7 @@ page_bg_img = f"""
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html = True)
-
+from pydantic_settings import BaseSettings
 import numpy as np
 import pandas as pd
 import seaborn as sns
