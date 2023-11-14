@@ -10,4 +10,4 @@ bokeh
 streamlit_bokeh_events
 streamlit-pandas-profiling
 seaborn
-
+pydantic_settings
