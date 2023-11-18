@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
 from PIL import Image
-import it
+import io
 from transformers import pipeline
+import matplotlib.pyplot as plt
 
 API_URL = "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4"
 HEADERS = {"Authorization": f"Bearer {'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'}"}
@@ -10,14 +11,30 @@ HEADERS = {"Authorization": f"Bearer {'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'}"}
 # Streamlit UI
 st.title("Image and Text Generation App")
 
+# Draw a horizontal line using HTML and CSS
+st.markdown(
+    """
+    <style>
+        .horizontal-line {{
+            border-top: 2px solid #ccc;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }}
+    </style>
+    <div class="horizontal-line"></div>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Split the page into two columns
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 # Image Inference Section
 with col1:
     st.header("Image Inference")
-    st.write("Enter an image URL:")
-    image_url = st.text_input("Enter your image URL:")
+    
+    image_url = st.text_input("Enter your image_key_word:")
     if st.button("Generate Image Inference"):
         # API Query
         response = requests.post(API_URL, headers=HEADERS, json={"inputs": image_url})
@@ -30,10 +47,12 @@ with col1:
 # Text Generation Section
 with col2:
     st.header("Text Generation")
-    st.write("Enter a keyword:")
+   
     keyword = st.text_input("Enter your keyword:")
     if st.button("Generate Text"):
         # Text Generation Pipeline
         generator = pipeline('text-generation', model='gpt2')
         generated_text = generator(keyword, max_length=100, num_return_sequences=1)[0]['generated_text']
         st.write(generated_text)
+
+
