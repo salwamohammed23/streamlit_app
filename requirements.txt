@@ -1,3 +1,5 @@
+transformers
+requests
 numpy
 scikit-learn
 pandas
