@@ -33,7 +33,7 @@ with col1:
 # Text Generation Section
 with col2:
     for i in range(100):
-        print("**")
+        st.write("**")
 
 
 with col3:    
