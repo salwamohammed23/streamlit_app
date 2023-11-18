@@ -33,20 +33,21 @@ with col1:
 # Text Generation Section
 with col2:
     # Draw a horizontal line using HTML and CSS
-    st.markdown(
-        """
-        <style>
-            .horizontal-line {{
-                border-top: 2px solid #ccc;
-                width: 100%;
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }}
-        </style>
-        <div class="horizontal-line"></div>
-        """,
-        unsafe_allow_html=True,
-    )
+    def draw_stars(length):
+        x = []
+        y = []
+      
+        for i in range(length):
+            x.append(i)  # تعيين القيمة للمحور الأفقي
+            y.append(i)  # تعيين القيمة للمحور العمودي
+    
+        plt.scatter(x, y, marker='*', color='black')  # رسم النجوم باستخدام رمز '*' ولون أسود
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        plt.title('Stars')
+        plt.show()
+    
+    draw_stars(50)
 
 with col3:    
     st.header("Text Generation")
