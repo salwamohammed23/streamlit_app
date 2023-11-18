@@ -11,24 +11,10 @@ HEADERS = {"Authorization": f"Bearer {'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'}"}
 # Streamlit UI
 st.title("Image and Text Generation App")
 
-# Draw a horizontal line using HTML and CSS
-st.markdown(
-    """
-    <style>
-        .horizontal-line {{
-            border-top: 2px solid #ccc;
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }}
-    </style>
-    <div class="horizontal-line"></div>
-    """,
-    unsafe_allow_html=True,
-)
+
 
 # Split the page into two columns
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 # Image Inference Section
 with col1:
@@ -46,6 +32,23 @@ with col1:
 
 # Text Generation Section
 with col2:
+    # Draw a horizontal line using HTML and CSS
+    st.markdown(
+        """
+        <style>
+            .horizontal-line {{
+                border-top: 2px solid #ccc;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }}
+        </style>
+        <div class="horizontal-line"></div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+with col3:    
     st.header("Text Generation")
    
     keyword = st.text_input("Enter your keyword:")
