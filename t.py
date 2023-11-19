@@ -14,7 +14,7 @@ st.title("Image and Text Generation App")
 
 
 # Split the page into two columns
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 # Image Inference Section
 with col1:
@@ -30,27 +30,12 @@ with col1:
         image = Image.open(io.BytesIO(image_bytes))
         st.image(image, caption="Inferred Image", use_column_width=True)
 
-# Text Generation Section
-with col2:
-    st.markdown(
-    """
-    <style>
-        .horizontal-line {{
-            border-top: 2px solid #ccc;
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }}
-    </style>
-    <div class="horizontal-line"></div>
-    """,
-    unsafe_allow_html=True,
-)
+
 
   
 
 
-with col3:    
+with col2:    
     st.header("Text Generation")
    
     keyword = st.text_input("Enter your keyword:")
