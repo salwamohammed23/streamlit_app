@@ -18,7 +18,7 @@ tab1, tab2= st.tabs(["Image Generate App", "Text Generation App"])
 # Image Inference Section
 with tab1:
     st.header("Image Inference")
-    image_url = st.text_input("Enter your keyword:")
+    image_url = st.text_input("Enter keyword:")
     if st.button("Generate Image"):
         # API Query
         response = requests.post(API_URL, headers=HEADERS, json={"inputs": image_url})
