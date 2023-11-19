@@ -18,10 +18,10 @@ col1, col2, col3 = st.columns(3)
 
 # Image Inference Section
 with col1:
-    st.header("Image Inference")
+    st.header("Image Generation")
     
-    image_url = st.text_input("Enter your image_key_word:")
-    if st.button("Generate Image Inference"):
+    image_url = st.text_input("Enter your keyword:")
+    if st.button("Generate Image"):
         # API Query
         response = requests.post(API_URL, headers=HEADERS, json={"inputs": image_url})
         image_bytes = response.content
@@ -32,8 +32,7 @@ with col1:
 
 # Text Generation Section
 with col2:
-    for i in range(20):
-        st.write("*                *")
+  
 
 
 with col3:    
