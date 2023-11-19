@@ -30,11 +30,6 @@ with col1:
         image = Image.open(io.BytesIO(image_bytes))
         st.image(image, caption="Inferred Image", use_column_width=True)
 
-
-
-  
-
-
 with col2:    
     st.header("Text Generation")
    
