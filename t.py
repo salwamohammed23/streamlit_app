@@ -32,6 +32,21 @@ with col1:
 
 # Text Generation Section
 with col2:
+    st.markdown(
+    """
+    <style>
+        .horizontal-line {{
+            border-top: 2px solid #ccc;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }}
+    </style>
+    <div class="horizontal-line"></div>
+    """,
+    unsafe_allow_html=True,
+)
+
   
 
 
